@@ -104,3 +104,11 @@ export const UsertBtn = styled.button`
     background-color: #e7e7e7;
   }
 `;
+
+export const UserUnfollowBtn = styled(UsertBtn)`
+  background-color: #5cd3a8;
+
+  &:hover {
+    background-color: #b8ecec;
+  }
+`;

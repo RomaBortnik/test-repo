@@ -12,6 +12,7 @@ const TweetList = ({ tweets }) => {
           tweets={tweets}
           avatar={avatar}
           followers={followers}
+          id={id}
         ></TweetListItem>
       ))}
     </StyledTweetList>
