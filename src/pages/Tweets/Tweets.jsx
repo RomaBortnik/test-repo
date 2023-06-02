@@ -8,19 +8,18 @@ import { UsertBtn } from 'components/TweetListItem/TweetListItem.styled';
 
 const Tweets = () => {
   const [tweets, setTweets] = useState([]);
-  const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
     const getTweets = async () => {
       try {
-        const data = await fetchTweets(pageNumber);
+        const data = await fetchTweets();
         setTweets(data);
       } catch (error) {
         return toast.error('Something went wrong. Please try again.');
       }
     };
     getTweets();
-  }, [pageNumber]);
+  }, []);
 
   console.log(tweets);
   return (
