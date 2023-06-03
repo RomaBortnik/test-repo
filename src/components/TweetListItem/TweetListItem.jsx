@@ -1,8 +1,7 @@
-import { useState } from 'react';
-import axios from 'axios';
 import PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { selectIsLoading, selectError } from 'redux/selectors';
 
 import {
   UserCard,
@@ -19,41 +18,18 @@ import {
 import backgroundImage from '../../images/background.png';
 import logo from '../../images/logo.png';
 import Loader from 'components/Loader';
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleFollowing } from 'redux/operations';
 
-const ContactListItem = ({ name, tweets, avatar, followers, id }) => {
-  const [followed, setFollowed] = useState(false);
-  const [followersCount, setFollowersCount] = useState(followers);
-  const [isLoading, setisLoading] = useState(false);
-
-  const follow = async value => {
-    setisLoading(true);
-    try {
-      await axios.put(`users/${id}`, { followers: followers + 1 });
-      setFollowed(true);
-      setFollowersCount(prevValue => prevValue + 1);
-      setisLoading(false);
-    } catch (error) {
-      setisLoading(false);
-      return error;
-    }
-  };
-
-  const unFollow = async value => {
-    setisLoading(true);
-    try {
-      await axios.put(`users/${id}`, { followers: followers - 1 });
-      setFollowed(false);
-      setFollowersCount(prevValue => prevValue - 1);
-      setisLoading(false);
-    } catch (error) {
-      setisLoading(false);
-      return error;
-    }
-  };
+const TweetListItem = ({ user }) => {
+  const { avatar, tweets, followers, following } = user;
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
 
   return (
     <>
-      {isLoading && <Loader />}
+      {isLoading && !error && <Loader />}
       <UserCard>
         <UserLogo src={logo}></UserLogo>
         <UserBackgroundImage src={backgroundImage} />
@@ -63,16 +39,21 @@ const ContactListItem = ({ name, tweets, avatar, followers, id }) => {
         </UserAvatar>
         <UserTweets>{tweets} tweets</UserTweets>
         <UserFollowers>
-          {String((followersCount / 1000).toFixed(3)).replace('.', ',')}{' '}
-          followers
+          {String((followers / 1000).toFixed(3)).replace('.', ',')} followers
         </UserFollowers>
 
-        {!followed ? (
-          <UsertBtn type="button" onClick={follow}>
+        {!following ? (
+          <UsertBtn
+            type="button"
+            onClick={() => dispatch(toggleFollowing({ user, value: 1 }))}
+          >
             follow
           </UsertBtn>
         ) : (
-          <UserUnfollowBtn type="button" onClick={unFollow}>
+          <UserUnfollowBtn
+            type="button"
+            onClick={() => dispatch(toggleFollowing({ user, value: -1 }))}
+          >
             following
           </UserUnfollowBtn>
         )}
@@ -83,12 +64,13 @@ const ContactListItem = ({ name, tweets, avatar, followers, id }) => {
   );
 };
 
-ContactListItem.propTypes = {
-  name: PropTypes.string.isRequired,
-  tweets: PropTypes.number.isRequired,
-  avatar: PropTypes.string.isRequired,
-  followers: PropTypes.number.isRequired,
-  id: PropTypes.string.isRequired,
+TweetListItem.propTypes = {
+  user: PropTypes.shape({
+    tweets: PropTypes.number.isRequired,
+    avatar: PropTypes.string.isRequired,
+    followers: PropTypes.number.isRequired,
+    following: PropTypes.bool.isRequired,
+  }),
 };
 
-export default ContactListItem;
+export default TweetListItem;
