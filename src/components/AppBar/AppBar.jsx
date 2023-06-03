@@ -1,5 +1,6 @@
 import Navigation from 'components/Navigation';
 import { Container } from 'components/SharedLayout/SharedLayout.styled';
+import StatusFilter from 'components/StatusFilter';
 
 import { Header, NavContainer } from './AppBar.styled';
 
@@ -8,7 +9,8 @@ const AppBar = () => {
     <Header>
       <Container>
         <NavContainer>
-          <Navigation></Navigation>
+          <Navigation />
+          <StatusFilter />
         </NavContainer>
       </Container>
     </Header>

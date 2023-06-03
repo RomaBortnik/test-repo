@@ -21,6 +21,10 @@ export const UserCard = styled.li`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 
+  flex-basis: calc((100% / 3 - 70px));
+  margin-left: 70px;
+  margin-top: 70px;
+
   &:not(:last-child) {
     margin-bottom: 24px;
   }

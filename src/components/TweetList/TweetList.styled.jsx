@@ -4,6 +4,9 @@ export const StyledTweetList = styled.ul`
   font-weight: 700;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto 36px;
+  margin-right: auto;
+  margin-bottom: 60px;
+
+  margin-left: calc(-1 * 70px);
+  margin-top: calc(-1 * 70px);
 `;
