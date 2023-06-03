@@ -3,6 +3,18 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://6478842a362560649a2def56.mockapi.io/';
 
+export const fetchAllUsers = createAsyncThunk(
+  'users/fetchAllUsers',
+  async (_, thunkAPI) => {
+    try {
+      const response = await axios.get(`users?page=1&limit=15`);
+      return response.data;
+    } catch (e) {
+      return thunkAPI.rejectWithValue(e.message);
+    }
+  }
+);
+
 export const fetchUsers = createAsyncThunk(
   'users/fetchFirstUsers',
   async (_, thunkAPI) => {

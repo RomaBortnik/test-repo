@@ -9,7 +9,6 @@
   color: inherit;
   overflow: hidden;
   width: 120px;
-  justify-content: center;
 }
 
 .btn::after {

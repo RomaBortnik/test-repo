@@ -8,6 +8,8 @@ import { UsertBtn } from 'components/TweetListItem/TweetListItem.styled';
 import Loader from 'components/Loader';
 import { selectError, selectIsLoading, selectUsers } from 'redux/selectors';
 import { fetchUsers, fetchNewUsers } from 'redux/operations';
+import { statusFilters } from 'redux/constants';
+import { setStatusFilter } from 'redux/filtersSlice';
 
 const Tweets = () => {
   const dispatch = useDispatch();
@@ -17,6 +19,7 @@ const Tweets = () => {
   const [pageNumber, setPageNumber] = useState(1);
 
   useEffect(() => {
+    dispatch(setStatusFilter(statusFilters.all));
     pageNumber === 1
       ? dispatch(fetchUsers())
       : dispatch(fetchNewUsers(pageNumber));
