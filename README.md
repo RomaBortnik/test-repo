@@ -48,5 +48,5 @@ submitting a pull request.
 ## Contact
 
 If you have any questions or inquiries, feel free to reach out to me
-[contact](https://t.me/romabortnik). I appreciate your feedback and will be
+[(contact)](https://t.me/romabortnik). I appreciate your feedback and will be
 happy to assist you.
