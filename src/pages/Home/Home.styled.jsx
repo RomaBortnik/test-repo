@@ -2,52 +2,35 @@ import styled from 'styled-components';
 
 export const HomePage = styled.div`
   width: 1000px;
-  height: 600px;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgba(70, 84, 97, 0.9);
   border-radius: 60px;
-  margin: 60px auto 0;
-  padding: 4px;
+  margin: 24px auto 0;
+  padding: 32px;
 `;
 
-export const HomePageContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-
-export const PhoneBook = styled.img`
-  // min-width: calc(100% / 2);
-  // height: 100%;
-  object-fit: cover;
-  border-radius: 60px;
-  margin: 0;
-`;
-
-export const PhoneBookWrapper = styled.div`
-  position: relative;
-  min-width: calc(100% / 2 - 20px);
-  margin: 0;
-`;
-
-export const PhoneBookBox = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+export const HomePageBox = styled.ul`
   width: 100%;
+  margin: 32px 0;
 `;
 
-export const PhoneBookTitle = styled.div`
-  font-size: 60px;
+export const HomePageTitle = styled.h1`
+  text-align: center;
+  font-size: 50px;
   font-weight: 700;
-  margin-bottom: 12px;
+  font-style: italic;
 `;
 
-export const PhoneBookDescr = styled.p`
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 16px;
+export const HomePageSubTitle = styled.h2`
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 32px;
+`;
 
-  // color: grey;
-  text-transform: uppercase;
+export const HomePageDescr = styled.li`
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 32px;
 `;
