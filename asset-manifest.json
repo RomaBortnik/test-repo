@@ -1,23 +1,21 @@
 {
   "files": {
-    "main.css": "/test-repo/static/css/main.d02b5be6.css",
-    "main.js": "/test-repo/static/js/main.67c5f4e7.js",
-    "static/js/330.6baf5222.chunk.js": "/test-repo/static/js/330.6baf5222.chunk.js",
-    "static/js/769.9451d56e.chunk.js": "/test-repo/static/js/769.9451d56e.chunk.js",
+    "main.css": "/test-repo/static/css/main.3756e0f6.css",
+    "main.js": "/test-repo/static/js/main.eea7b139.js",
+    "static/js/643.805e6da8.chunk.js": "/test-repo/static/js/643.805e6da8.chunk.js",
+    "static/js/687.c67fefc5.chunk.js": "/test-repo/static/js/687.c67fefc5.chunk.js",
     "static/css/544.7c3dd9d6.chunk.css": "/test-repo/static/css/544.7c3dd9d6.chunk.css",
-    "static/media/phoneImage.jpg": "/test-repo/static/media/phoneImage.f01a8da71ec89042812f.jpg",
-    "static/media/phoneBook.jpg": "/test-repo/static/media/phoneBook.1d5e7f50098da2e60d95.jpg",
     "static/media/background.png": "/test-repo/static/media/background.6c52ceea786ad6626067.png",
     "static/media/ellipse.png": "/test-repo/static/media/ellipse.619bf971a2d518bcc70c.png",
     "index.html": "/test-repo/index.html",
-    "main.d02b5be6.css.map": "/test-repo/static/css/main.d02b5be6.css.map",
-    "main.67c5f4e7.js.map": "/test-repo/static/js/main.67c5f4e7.js.map",
-    "330.6baf5222.chunk.js.map": "/test-repo/static/js/330.6baf5222.chunk.js.map",
-    "769.9451d56e.chunk.js.map": "/test-repo/static/js/769.9451d56e.chunk.js.map",
+    "main.3756e0f6.css.map": "/test-repo/static/css/main.3756e0f6.css.map",
+    "main.eea7b139.js.map": "/test-repo/static/js/main.eea7b139.js.map",
+    "643.805e6da8.chunk.js.map": "/test-repo/static/js/643.805e6da8.chunk.js.map",
+    "687.c67fefc5.chunk.js.map": "/test-repo/static/js/687.c67fefc5.chunk.js.map",
     "544.7c3dd9d6.chunk.css.map": "/test-repo/static/css/544.7c3dd9d6.chunk.css.map"
   },
   "entrypoints": [
-    "static/css/main.d02b5be6.css",
-    "static/js/main.67c5f4e7.js"
+    "static/css/main.3756e0f6.css",
+    "static/js/main.eea7b139.js"
   ]
 }
