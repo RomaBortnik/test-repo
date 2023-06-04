@@ -44,3 +44,9 @@ for improvements, please open an issue or submit a pull request.
 When contributing, make sure to follow the existing code style and guidelines.
 Provide detailed information about your changes and test them thoroughly before
 submitting a pull request.
+
+## Contact
+
+If you have any questions or inquiries, feel free to reach out to me
+[contact](https://t.me/romabortnik). I appreciate your feedback and will be
+happy to assist you.
