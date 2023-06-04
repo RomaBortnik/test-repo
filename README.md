@@ -27,9 +27,14 @@ On the bottom of the Tweets page you can load next users by clicking
 
 The website will also provide an opportunity to select users you would like to
 follow using the `«FOLLOW»` button and unfollow, if you are already subscribed,
-using the `«FOLLOWing»` button.
+using the `«FOLLOWING»` button.
 
 ![Load more button](./assets/screen5.png)
+
+## Technologies Used
+
+- Frontend: HTML, CSS, JavaScript, React.js, Redux Toolkit;
+- Backend: Mockapi.io;
 
 ## Contribution
 
