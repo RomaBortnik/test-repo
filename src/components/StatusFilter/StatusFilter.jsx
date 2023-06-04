@@ -5,7 +5,6 @@ import { setStatusFilter } from 'redux/filtersSlice';
 
 import Button from 'components/Button';
 import { FilterContainer, FilterBtn } from './StatusFilter.styled';
-import { fetchUsers, fetchAllUsers } from 'redux/operations';
 import useOutsideAlerter from 'hooks/useOutsideAlerter';
 
 const StatusFilter = () => {
@@ -27,7 +26,6 @@ const StatusFilter = () => {
           <Button
             selected={filter === statusFilters.all}
             onClick={() => {
-              dispatch(fetchUsers());
               handleFilterChange(statusFilters.all);
             }}
           >
@@ -36,7 +34,6 @@ const StatusFilter = () => {
           <Button
             selected={filter === statusFilters.following}
             onClick={() => {
-              dispatch(fetchAllUsers());
               handleFilterChange(statusFilters.following);
             }}
           >
@@ -45,7 +42,6 @@ const StatusFilter = () => {
           <Button
             selected={filter === statusFilters.unfollowing}
             onClick={() => {
-              dispatch(fetchAllUsers());
               handleFilterChange(statusFilters.unfollowing);
             }}
           >
