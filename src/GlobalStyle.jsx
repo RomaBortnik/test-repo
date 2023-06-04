@@ -1,5 +1,6 @@
-@import-normalize; /* bring in normalize.css styles */
+import { createGlobalStyle } from 'styled-components';
 
+export const GlobalStyle = createGlobalStyle`
 *,
 *::before,
 *::after {
@@ -16,22 +17,16 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(
-    to right,
-    rgb(173, 243, 222),
-    rgb(239, 248, 154)
-  );
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
+  // background-image: linear-gradient(
+  //   to right,
+  //   rgb(173, 243, 222),
+  //   rgb(239, 248, 154)
+  // );
+  // color: #000;
+  // font-size: 18px;
+  // font-weight: 500;
 
-  background-color: #b8ecec;
-  color: #5a5a6b;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  // background-color: #b8ecec;
 }
 
 h1,
@@ -59,8 +54,4 @@ img {
 li {
   list-style: none;
 }
-
-img {
-  margin: 0 auto;
-  width: 30vw;
-}
+`;

@@ -4,6 +4,7 @@ export const FilterBtn = styled.div`
   position: relative;
   width: 144px;
   border-radius: 12px;
+  color: #000;
   background-color: #fff;
   padding: 8px 12px;
   cursor: pointer;

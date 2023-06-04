@@ -16,6 +16,8 @@ import { fetchUsers, fetchNewUsers } from 'redux/operations';
 import { statusFilters } from 'redux/constants';
 import { setStatusFilter } from 'redux/filtersSlice';
 
+import { BackButton } from './Tweets.styled';
+
 const Tweets = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
@@ -34,6 +36,7 @@ const Tweets = () => {
   return (
     <>
       {isLoading && !error && <Loader />}
+      <BackButton to="/">Go back</BackButton>
       <TweetList />
       {users.length !== 15 && filterStatus === 'all' && (
         <UsertBtn

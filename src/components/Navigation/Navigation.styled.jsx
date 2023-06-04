@@ -6,7 +6,7 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 500;
   font-size: 20px;
   padding: 8px 4px;
-  color: #000;
+  color: inherit;
   margin-right: 16px;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ export const StyledNavLink = styled(NavLink)`
     display: inline-block;
     width: 100%;
     height: 2px;
-    background-color: #000;
+    background-color: #fff;
     transform: translateX(-100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }

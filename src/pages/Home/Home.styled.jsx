@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HomePage = styled.div`
   width: 1000px;
-  height: 100%;
+  height: 600px;
   background-color: #fff;
   border-radius: 60px;
   margin: 60px auto 0;
