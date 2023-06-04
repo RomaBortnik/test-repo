@@ -1,7 +1,7 @@
 import TweetListItem from 'components/TweetListItem';
 import { useSelector } from 'react-redux';
-import { selectVisibleUsers } from 'redux/selectors';
 
+import { selectVisibleUsers } from 'redux/selectors';
 import { StyledTweetList } from './TweetList.styled';
 
 const TweetList = () => {

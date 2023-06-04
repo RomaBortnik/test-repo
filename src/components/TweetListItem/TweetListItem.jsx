@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { selectIsLoading, selectError } from 'redux/selectors';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { selectIsLoading, selectError } from 'redux/selectors';
+import { toggleFollowing } from 'redux/operations';
+import backgroundImage from '../../images/background.png';
+import logo from '../../images/logo.png';
+import Loader from 'components/Loader';
 import {
   UserCard,
   HorizontalLine,
@@ -15,11 +20,6 @@ import {
   UserLogo,
   UserUnfollowBtn,
 } from './TweetListItem.styled';
-import backgroundImage from '../../images/background.png';
-import logo from '../../images/logo.png';
-import Loader from 'components/Loader';
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleFollowing } from 'redux/operations';
 
 const TweetListItem = ({ user }) => {
   const { avatar, tweets, followers, following } = user;

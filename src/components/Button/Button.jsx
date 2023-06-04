@@ -1,9 +1,11 @@
 import clsx from 'clsx';
+
+import { FilterButton } from './Button.styled';
 import css from './Button.module.css';
 
 const Button = ({ selected = false, children, ...otherProps }) => {
   return (
-    <button
+    <FilterButton
       className={clsx(css.btn, {
         [css.isSelected]: selected,
       })}
@@ -11,7 +13,7 @@ const Button = ({ selected = false, children, ...otherProps }) => {
       {...otherProps}
     >
       {children}
-    </button>
+    </FilterButton>
   );
 };
 

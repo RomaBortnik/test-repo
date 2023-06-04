@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { lazy } from 'react';
 
-import SharedLayout from './SharedLayout';
 import { GlobalStyle } from 'GlobalStyle';
+import SharedLayout from './SharedLayout';
 import Particle from './Particle/Particle';
 
 const Home = lazy(() => import('../pages/Home'));
