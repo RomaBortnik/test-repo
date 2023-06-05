@@ -26,6 +26,10 @@ const TweetListItem = ({ userCard }) => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const totalFollowers =
+    followers > 1000
+      ? String((followers / 1000).toFixed(3)).replace('.', ',')
+      : followers;
 
   return (
     <>
@@ -38,9 +42,7 @@ const TweetListItem = ({ userCard }) => {
           <UserImage src={avatar} alt={user} />
         </UserAvatar>
         <UserTweets>{tweets} tweets</UserTweets>
-        <UserFollowers>
-          {String((followers / 1000).toFixed(3)).replace('.', ',')} followers
-        </UserFollowers>
+        <UserFollowers>{totalFollowers} followers</UserFollowers>
 
         {!following ? (
           <UsertBtn
