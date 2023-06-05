@@ -27,6 +27,7 @@ const StatusFilter = () => {
             selected={filter === statusFilters.all}
             onClick={() => {
               handleFilterChange(statusFilters.all);
+              window.scrollTo(0, 0);
             }}
           >
             All
@@ -34,6 +35,7 @@ const StatusFilter = () => {
           <Button
             selected={filter === statusFilters.unfollowing}
             onClick={() => {
+              window.scrollTo(0, 0);
               handleFilterChange(statusFilters.unfollowing);
             }}
           >
@@ -42,6 +44,7 @@ const StatusFilter = () => {
           <Button
             selected={filter === statusFilters.following}
             onClick={() => {
+              window.scrollTo(0, 0);
               handleFilterChange(statusFilters.following);
             }}
           >
