@@ -3,15 +3,15 @@ import ellipse from '../../images/ellipse.png';
 
 export const UserCard = styled.li`
   position: relative;
-  width: 380px;
+  width: 100%;
   height: 460px;
+  padding: 28px 36px 36px;
   color: #ebd8ff;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
-  text-transform: uppercase;
   background: linear-gradient(
     114.99deg,
     #471ca9 -0.99%,
@@ -21,12 +21,20 @@ export const UserCard = styled.li`
   box-shadow: -2.5777px 6.87386px 20.6216px rgba(0, 0, 0, 0.23);
   border-radius: 20px;
 
-  flex-basis: calc((100% / 3 - 70px));
-  margin-left: 70px;
-  margin-top: 70px;
-
   &:not(:last-child) {
-    margin-bottom: 24px;
+    @media (max-width: 767px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-basis: calc((100% / 2 - 40px));
+    margin: 40px 0 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    flex-basis: calc((100% / 3 - 58px));
+    margin: 58px 0 0 58px;
   }
 `;
 
@@ -41,7 +49,7 @@ export const UserLogo = styled.img`
 export const UserBackgroundImage = styled.img`
   width: 308px;
   height: auto;
-  margin: 28px auto 88px;
+  margin: 0 auto 88px;
 `;
 
 export const HorizontalLine = styled.div`
@@ -60,7 +68,16 @@ export const UserAvatar = styled.div`
   width: 80px;
   height: 80px;
   top: 178px;
-  left: 150px;
+  left: 136px;
+  left: 128px;
+
+  @media (min-width: 768px) {
+    left: 136px;
+  }
+
+  @media (min-width: 1280px) {
+    left: 150px;
+  }
 
   background-image: url('${ellipse}');
   background-size: cover;

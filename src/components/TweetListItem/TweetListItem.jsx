@@ -21,8 +21,8 @@ import {
   UserUnfollowBtn,
 } from './TweetListItem.styled';
 
-const TweetListItem = ({ user }) => {
-  const { avatar, tweets, followers, following } = user;
+const TweetListItem = ({ userCard }) => {
+  const { user, avatar, tweets, followers, following } = userCard;
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
@@ -35,7 +35,7 @@ const TweetListItem = ({ user }) => {
         <UserBackgroundImage src={backgroundImage} />
         <HorizontalLine />
         <UserAvatar>
-          <UserImage src={avatar} alt="User image" />
+          <UserImage src={avatar} alt={user} />
         </UserAvatar>
         <UserTweets>{tweets} tweets</UserTweets>
         <UserFollowers>
@@ -65,11 +65,12 @@ const TweetListItem = ({ user }) => {
 };
 
 TweetListItem.propTypes = {
-  user: PropTypes.shape({
+  userCard: PropTypes.shape({
     tweets: PropTypes.number.isRequired,
     avatar: PropTypes.string.isRequired,
     followers: PropTypes.number.isRequired,
     following: PropTypes.bool.isRequired,
+    user: PropTypes.string.isRequired,
   }),
 };
 

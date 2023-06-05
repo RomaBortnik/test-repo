@@ -32,20 +32,20 @@ const StatusFilter = () => {
             All
           </Button>
           <Button
-            selected={filter === statusFilters.following}
-            onClick={() => {
-              handleFilterChange(statusFilters.following);
-            }}
-          >
-            Following
-          </Button>
-          <Button
             selected={filter === statusFilters.unfollowing}
             onClick={() => {
               handleFilterChange(statusFilters.unfollowing);
             }}
           >
-            Unfollowing
+            Follow
+          </Button>
+          <Button
+            selected={filter === statusFilters.following}
+            onClick={() => {
+              handleFilterChange(statusFilters.following);
+            }}
+          >
+            Followings
           </Button>
         </FilterContainer>
       )}

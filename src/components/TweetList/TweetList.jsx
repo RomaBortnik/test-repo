@@ -9,7 +9,7 @@ const TweetList = () => {
   return (
     <StyledTweetList>
       {users.map(user => (
-        <TweetListItem key={user.id} user={user}></TweetListItem>
+        <TweetListItem key={user.id} userCard={user}></TweetListItem>
       ))}
     </StyledTweetList>
   );

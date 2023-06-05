@@ -10,7 +10,7 @@ export const FilterButton = styled.button`
   background-color: transparent;
   color: inherit;
   overflow: hidden;
-  width: 120px;
+  width: 100%;
 
   &::after {
     position: absolute;
