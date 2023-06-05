@@ -24,7 +24,7 @@ export const HomePageBox = styled.ul`
   margin: 12px 0 24px;
 
   @media (min-width: 768px) {
-    margin: 20px 0 36px;
+    margin: 32px 0;
   }
 `;
 
