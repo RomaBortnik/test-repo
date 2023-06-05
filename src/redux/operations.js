@@ -29,11 +29,11 @@ export const fetchNewUsers = createAsyncThunk(
 
 export const toggleFollowing = createAsyncThunk(
   'users/toggleFollowing',
-  async ({ user, value }, thunkAPI) => {
+  async ({ userCard, value }, thunkAPI) => {
     try {
-      const response = await axios.put(`users/${user.id}`, {
-        following: !user.following,
-        followers: user.followers + value,
+      const response = await axios.put(`users/${userCard.id}`, {
+        following: !userCard.following,
+        followers: userCard.followers + value,
       });
       return response.data;
     } catch (e) {

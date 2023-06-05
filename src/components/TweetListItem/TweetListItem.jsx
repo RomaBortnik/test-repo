@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -45,14 +45,20 @@ const TweetListItem = ({ userCard }) => {
         {!following ? (
           <UsertBtn
             type="button"
-            onClick={() => dispatch(toggleFollowing({ user, value: 1 }))}
+            onClick={() => {
+              toast.success(`You have successfully subscribed on ${user}`);
+              return dispatch(toggleFollowing({ userCard, value: 1 }));
+            }}
           >
             follow
           </UsertBtn>
         ) : (
           <UserUnfollowBtn
             type="button"
-            onClick={() => dispatch(toggleFollowing({ user, value: -1 }))}
+            onClick={() => {
+              toast.warning(`You have successfully unsubscribed from ${user}`);
+              return dispatch(toggleFollowing({ userCard, value: -1 }));
+            }}
           >
             following
           </UserUnfollowBtn>

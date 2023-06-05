@@ -50,6 +50,14 @@ export const UserBackgroundImage = styled.img`
   width: 308px;
   height: auto;
   margin: 0 auto 88px;
+
+  @media (max-width: 767px) {
+    margin-bottom: 116px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    margin-bottom: 103px;
+  }
 `;
 
 export const HorizontalLine = styled.div`
@@ -68,7 +76,6 @@ export const UserAvatar = styled.div`
   width: 80px;
   height: 80px;
   top: 178px;
-  left: 136px;
   left: 128px;
 
   @media (min-width: 768px) {
